@@ -38,7 +38,7 @@ cp -a /opt/whisper/lib/. /usr/local/lib/
 ldconfig
 
 msg_info "Setting up Enchantarr"
-$STD uv venv /opt/enchantarr-venv
+$STD uv venv --python 3.12 /opt/enchantarr-venv
 $STD uv pip install -p /opt/enchantarr-venv/bin/python -r /opt/enchantarr/backend/pyproject.toml
 mkdir -p /data /downloads
 cat <<EOF >/etc/enchantarr.env
