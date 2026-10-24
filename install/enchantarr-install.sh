@@ -43,8 +43,8 @@ $STD uv pip install -p /opt/enchantarr-venv/bin/python -r /opt/enchantarr/backen
 mkdir -p /data /downloads
 cat <<EOF >/etc/enchantarr.env
 ENCHANTARR_DATA_DIR=/data
-ENCHANTARR_STAGING_DIR=/downloads/.trimarr-staging
-OPTIMARR_GIT_SHA=$(cat /opt/enchantarr/.image_sha)
+ENCHANTARR_STAGING_DIR=/downloads/.enchantarr-staging
+ENCHANTARR_GIT_SHA=$(cat /opt/enchantarr/.image_sha)
 EOF
 msg_ok "Set up Enchantarr"
 
