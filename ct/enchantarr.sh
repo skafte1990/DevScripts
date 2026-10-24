@@ -43,7 +43,7 @@ function update_script() {
 
     msg_info "Updating Enchantarr"
     $STD uv pip install -U -p /opt/enchantarr-venv/bin/python -r /opt/enchantarr/backend/pyproject.toml
-    sed -i "s/^OPTIMARR_GIT_SHA=.*/OPTIMARR_GIT_SHA=$(cat /opt/enchantarr/.image_sha)/" /etc/enchantarr.env
+    sed -i "s/^ENCHANTARR_GIT_SHA=.*/ENCHANTARR_GIT_SHA=$(cat /opt/enchantarr/.image_sha)/" /etc/enchantarr.env
     msg_ok "Updated Enchantarr"
 
     msg_info "Starting Enchantarr"
